@@ -102,7 +102,7 @@ seurat_list <- lapply(seurat_list, function(obj) {
 
 saveRDS(seurat_list, file = "GSE202352_combined_seurat_list.rds")
 
-# 批次效應整合
+#### 3) Batch effect integration ####
 if(length(seurat_list) > 0) {
   # 使用 FindIntegrationAnchors 和 IntegrateData 來進行批次效應處理
   features <- SelectIntegrationFeatures(object.list = seurat_list)
