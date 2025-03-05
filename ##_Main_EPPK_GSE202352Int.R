@@ -156,6 +156,8 @@ Set_SubClust_k <- 20
 source("DBMarker_Skin_Combine_Lab_M2_Fib.R")
 
 DB_Skin_Marker_Test <- df_all_markers_ChatGPT
+
+DefaultAssay(seuratObject_Sample) <- "RNA"
 # Call scMRMA
 result_scMRMA <- scMRMA(
   input = seuratObject_Sample,
